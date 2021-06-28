@@ -22,10 +22,11 @@ console.log(chooseStations(stations));
 
 // x marks the perfect shot
 const moves = ['north', 'north', 'west', 'west', 'north', 'east', 'north']
-const finalPosition = moves => {
+function finalPosition(moves) {
   let position = [0, 0];
-  moves.forEach(move => {
-    switch (move) {
+  for (let move of moves) {
+    switch (move) 
+      {
       case 'north':
         position[1]++;
         break;
@@ -39,7 +40,8 @@ const finalPosition = moves => {
         position[0]--;
         break;
     }
-  });
+  }
   return position;
 }
 console.log(finalPosition(moves));
+
